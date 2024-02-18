@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/fav-icon.png" type="image/x-icon" />
+    <title>P-Ticket</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+      .font-raleway {
+        font-family: "Raleway", sans-serif;
+      }
+      .font-roboto {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-inter">
+    <!-- Header ---------------->
+    <header class="max-w-7xl mx-auto px-2 py-5">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a
+                  class="text-lg font-raleway font-medium text-[#030712] opacity-70"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-lg font-raleway font-medium text-[#030712] opacity-70"
+                  href="#"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-lg font-raleway font-medium text-[#030712] opacity-70"
+                  href="#"
+                  >Destination</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-lg font-raleway font-medium text-[#030712] opacity-70"
+                  href="#"
+                  >Search</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a
+            class="btn btn-ghost text-4xl text-black font-raleway font-extrabold"
+            >P-Ticket</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <a
+                class="text-lg font-raleway font-medium text-[#030712] opacity-70"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-lg font-raleway font-medium text-[#030712] opacity-70"
+                href="#"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-lg font-raleway font-medium text-[#030712] opacity-70"
+                href="#"
+                >Destination</a
+              >
+            </li>
+            <li class="font-raleway">
+              <a
+                class="text-lg font-raleway font-medium text-[#030712] opacity-70"
+                href="#"
+                >Search</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a
+            class="btn border border-green-500 bg-green-100 text-green-500 hover:border-green-500 hover:bg-transparent duration-300"
+          >
+            Bus
+            <svg
+              width="20"
+              height="14"
+              viewBox="0 0 22 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 13C3 13.5304 3.21071 14.0391 3.58579 14.4142C3.96086 14.7893 4.46957 15 5 15C5.53043 15 6.03914 14.7893 6.41421 14.4142C6.78929 14.0391 7 13.5304 7 13M3 13C3 12.4696 3.21071 11.9609 3.58579 11.5858C3.96086 11.2107 4.46957 11 5 11C5.53043 11 6.03914 11.2107 6.41421 11.5858C6.78929 11.9609 7 12.4696 7 13M3 13H1V2C1 1.73478 1.10536 1.48043 1.29289 1.29289C1.48043 1.10536 1.73478 1 2 1H16C17.3261 1 18.5979 1.7375 19.5355 3.05025C20.4732 4.36301 21 6.14348 21 8M7 13H15M15 13C15 13.5304 15.2107 14.0391 15.5858 14.4142C15.9609 14.7893 16.4696 15 17 15C17.5304 15 18.0391 14.7893 18.4142 14.4142C18.7893 14.0391 19 13.5304 19 13M15 13C15 12.4696 15.2107 11.9609 15.5858 11.5858C15.9609 11.2107 16.4696 11 17 11C17.5304 11 18.0391 11.2107 18.4142 11.5858C18.7893 11.9609 19 12.4696 19 13M19 13H21V8M21 8H16.5L15 1M1 6H16M6 1V6M11 1V6"
+                stroke="#1DD100"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Banner ----------------->
+      <section class="max-w-7xl mx-auto px-2">
+        <div
+          class="bg-[url('./img/banner.png')] bg-no-repeat bg-cover bg-center min-h-[580px] rounded-[32px] flex justify-center items-center"
+        >
+          <div class="max-w-[740px] text-center space-y-8">
+            <h1
+              class="text-[64px] leading[86px] font-raleway font-extrabold text-white"
+            >
+              End-to-End Travel with
+              <span class="text-green-500">P Paribahan</span>
+            </h1>
+            <p class="font-inter leading-8 text-lg text-white">
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </p>
+            <button
+              class="btn bg-green-500 text-black border-transparent font-raleway font-bold text-xl w-44 h-14"
+            >
+              Buy Tickets
+            </button>
+          </div>
+        </div>
+        <!-- Stats ---->
+        <div
+          class="flex justify-center items-center gap-6 relative -translate-y-1/2"
+        >
+          <div
+            class="flex items-center border-b-4 border-green-500 rounded-3xl p-8 gap-4 bg-white"
+          >
+            <img src="./img/people.png" />
+            <div>
+              <h2 class="font-bold text-4xl">500k+</h2>
+              <p class="opacity-60 text-lg">Registered users</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center border-b-4 border-green-500 rounded-3xl p-8 gap-4 bg-white"
+          >
+            <img src="./img/ticket.png" />
+            <div>
+              <h2 class="font-bold text-4xl">1.7 lacks</h2>
+              <p class="opacity-60 text-lg">Tickets sold</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center border-b-4 border-green-500 rounded-3xl p-8 gap-4 bg-white"
+          >
+            <img src="./img/bus.png" />
+            <div>
+              <h2 class="font-bold text-4xl">80K+</h2>
+              <p class="opacity-60 text-lg">Rental partners</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Best Offers --------------->
+      <section class="max-w-7xl mx-auto px-2 space-y-12">
+        <h2 class="font-raleway font-bold text-[40px] text-center">
+          Best offers for you
+        </h2>
+        <!-- Coupons -->
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-[#FFBF0F] rounded-3xl grid grid-cols-12 items-center">
+            <div class="p-[50px] col-span-7">
+              <h2 class="text-[40px] font-black">15% OFF</h2>
+              <p class="text-xl font-semibold">on your next purchase</p>
+              <p class="text-lg opacity-50">use by January 2024</p>
+            </div>
+            <div class="col-span-1">
+              <img class="w-full" src="./img/cupon-devider.png" alt="" />
+            </div>
+            <div class="p-9 col-span-4">
+              <h3 class="font-raleway font-bold text-[32px] uppercase">
+                NEW15
+              </h3>
+              <p class="font-raleway font-medium text-xl opacity-40">
+                Coupon Code
+              </p>
+            </div>
+          </div>
+          <div class="bg-[#F78C9C] rounded-3xl grid grid-cols-12 items-center">
+            <div class="p-[50px] col-span-7">
+              <h2 class="text-[40px] font-black">20% OFF</h2>
+              <p class="text-xl font-semibold">on your next purchase</p>
+              <p class="text-lg opacity-50">use by January 2024</p>
+            </div>
+            <div class="col-span-1">
+              <img class="w-full" src="./img/cupon-devider.png" alt="" />
+            </div>
+            <div class="p-9 ps-5 pe-5 col-span-4">
+              <h3 class="font-raleway font-bold text-[32px] capitalize">
+                Couple 20
+              </h3>
+              <p class="font-raleway font-medium text-xl opacity-40">
+                Coupon Code
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button
+            class="btn bg-transparent border border-green-500 rounded-xl text-green-500 font-bold font-raleway text-xl w-48"
+          >
+            See All Offers
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
