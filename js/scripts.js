@@ -25,7 +25,8 @@ function seatSerialStyle() {
       "py-4",
       "bg-[#F7F8F8]",
       "rounded-xl",
-      "text-center"
+      "text-center",
+      "cursor-pointer"
     );
   }
 }

@@ -269,7 +269,7 @@
             </p>
           </div>
           <!-- Ticket Design ---->
-          <div class="bg-white rounded-3xl grid grid-cols-12 pe-11">
+          <div class="bg-white rounded-3xl grid grid-cols-12 pe-11 mt-6">
             <div class="col-span-9 p-8 space-y-6">
               <div class="flex justify-between items-center">
                 <div class="flex gap-4 items-center">
@@ -346,9 +346,9 @@
           </div>
           <!-- Buy Tickets ---------->
           <div class="max-w-7xl mx-auto px-2 mt-6">
-            <div class="p-8 rounded-3xl bg-white">
-              <!-- Bus Seats ---->
-              <div class="pe-8 border-e-2 border-dashed space-y-6">
+            <div class="p-8 rounded-3xl bg-white grid grid-cols-5">
+              <!-- Bus Seats ----->
+              <div class="pe-8 border-e-2 border-dashed space-y-6 col-span-3">
                 <div>
                   <h3
                     class="font-raleway font-semibold text-2xl pb-6 border-b-2 border-dashed"
@@ -435,6 +435,66 @@
                       <li class="seat-serial">J3</li>
                       <li class="seat-serial">J4</li>
                     </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Pricing and Form ------>
+              <div class="ps-8 space-y-6 col-span-2">
+                <h3
+                  class="font-raleway font-semibold text-2xl pb-6 border-b-2 border-dashed"
+                >
+                  Select Your Seat
+                </h3>
+                <!-- Ticket Pricing ---->
+                <div class="p-8 rounded-xl bg-[#F7F8F8]">
+                  <div
+                    class="pb-4 border-b-2 border-dashed flex justify-between items-center"
+                  >
+                    <h5 class="font-medium">
+                      Seat
+                      <span
+                        class="text-xs text-white font-bold px-2 rounded-md bg-green-500"
+                        >2</span
+                      >
+                    </h5>
+                    <h5 class="font-medium">Class</h5>
+                    <h5 class="font-medium">Price</h5>
+                  </div>
+                  <!-- Selected Ticket List ---->
+                  <ul class="space-y-4 py-4 border-b-2">
+                    <li class="opacity-60 flex justify-between items-center">
+                      <span>C2</span><span>Economy</span><span>550</span>
+                    </li>
+                    <li class="opacity-60 flex justify-between items-center">
+                      <span>C2</span><span>Economy</span><span>550</span>
+                    </li>
+                  </ul>
+                  <!-- Totals and apply Coupon -->
+                  <div class="flex justify-between items-center py-4">
+                    <h5 class="font-medium">Total Price</h5>
+                    <h5 class="font-medium">
+                      BDT
+                      <span>1100</span>
+                    </h5>
+                  </div>
+                  <label class="flex bg-white p-2 rounded-xl mb-4">
+                    <input
+                      class="w-full ps-2 outline-1 outline-emerald-500 rounded-lg"
+                      type="text"
+                      placeholder="Have any coupon?"
+                    />
+                    <input
+                      class="btn bg-green-500 text-white hover:bg-green-700"
+                      type="submit"
+                      value="Apply"
+                    />
+                  </label>
+                  <div class="flex justify-between items-center">
+                    <h5 class="font-medium">Grand Total</h5>
+                    <h5 class="font-medium">
+                      BDT
+                      <span>1100</span>
+                    </h5>
                   </div>
                 </div>
               </div>
