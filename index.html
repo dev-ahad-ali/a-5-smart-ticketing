@@ -29,7 +29,7 @@
       }
     </style>
   </head>
-  <body class="font-inter">
+  <body id="body" class="font-inter">
     <!-- Header ---------------->
     <header class="max-w-7xl mx-auto px-2 py-5">
       <div class="navbar bg-base-100">
@@ -590,7 +590,8 @@
     </footer>
     <!-- Modal ----------->
     <div
-      class="max-w-[720px] mx-auto py-14 px-20 bg-white rounded-xl text-center space-y-6 shadow-2xl fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 hidden"
+      id="success-modal"
+      class="max-w-[720px] mx-auto py-14 px-20 bg-white rounded-xl text-center space-y-6 shadow-2xl fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-10 hidden"
     >
       <div class="flex justify-center">
         <img src="./img/succsess.png" alt="" />
@@ -606,6 +607,7 @@
         Shortly you will find a confirmation in your email.
       </p>
       <button
+        id="modal-close"
         class="btn bg-green-500 text-white rounded-[32px] w-[300px] h-14 font-roboto font-semibold"
       >
         Continue

@@ -134,3 +134,13 @@ phoneNumber.addEventListener("keyup", function (value) {
     formSubmit.setAttribute("disabled", true);
   }
 });
+const formSubmit = document.getElementById("form-submit");
+formSubmit.addEventListener("click", function () {
+  const modal = document.getElementById("success-modal");
+  modal.classList.remove("hidden");
+});
+const modalClose = document.getElementById("modal-close");
+modalClose.addEventListener("click", function () {
+  const modal = document.getElementById("success-modal");
+  modal.classList.add("hidden");
+});
