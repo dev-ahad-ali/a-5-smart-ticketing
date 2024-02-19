@@ -39,3 +39,23 @@ document
     const ticketArea = document.getElementById("buy-ticket-area");
     ticketArea.scrollIntoView({ behavior: "smooth" });
   });
+
+// Set inner text Function ---------------------
+function setInnerText(elementId, value) {
+  document.getElementById(elementId).innerText = value;
+}
+
+// Buying Ticket Function ------------------------
+const seats = document.getElementsByClassName("seat-serial");
+let seatCount = 0;
+let totalSeatLeft = parseInt(document.getElementById("seat-left").innerText);
+for (const seat of seats) {
+  seat.addEventListener("click", function () {
+    // Seat Added ---->
+    seatCount = seatCount + 1;
+    setInnerText("seat-added", seatCount);
+    // Seat Left ---->
+    totalSeatLeft = totalSeatLeft - 1;
+    setInnerText("seat-left", totalSeatLeft);
+  });
+}

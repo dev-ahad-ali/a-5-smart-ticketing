@@ -291,7 +291,7 @@
                 >
                   <img src="./img/seat-outline.png" alt="" />
                   <p class="font-medium text-lg text-green-500">
-                    <span>40</span> Seats left
+                    <span id="seat-left">40</span> Seats left
                   </p>
                 </div>
               </div>
@@ -454,8 +454,9 @@
                     <h5 class="font-medium">
                       Seat
                       <span
+                        id="seat-added"
                         class="text-xs text-white font-bold px-2 rounded-md bg-green-500"
-                        >2</span
+                        >0</span
                       >
                     </h5>
                     <h5 class="font-medium">Class</h5>
@@ -478,18 +479,20 @@
                       <span>1100</span>
                     </h5>
                   </div>
-                  <label class="flex bg-white p-2 rounded-xl mb-4">
+                  <div class="flex bg-white p-2 rounded-xl mb-4">
                     <input
+                      disabled
                       class="w-full ps-2 outline-1 outline-emerald-500 rounded-lg"
                       type="text"
                       placeholder="Have any coupon?"
                     />
                     <input
+                      disabled
                       class="btn bg-green-500 text-white hover:bg-green-700"
                       type="submit"
                       value="Apply"
                     />
-                  </label>
+                  </div>
                   <div class="flex justify-between items-center">
                     <h5 class="font-medium">Grand Total</h5>
                     <h5 class="font-medium">
