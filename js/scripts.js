@@ -143,5 +143,5 @@ const modalClose = document.getElementById("modal-close");
 modalClose.addEventListener("click", function () {
   const modal = document.getElementById("success-modal");
   modal.classList.add("hidden");
-  location.reload();
+  window.location.reload();
 });
