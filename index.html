@@ -464,22 +464,30 @@
                   </div>
                   <!-- Selected Ticket List ---->
                   <ul id="seat-list" class="space-y-4 py-4 border-b-2"></ul>
+                  <p id="seat-limit" class="text-red-500 hidden">
+                    Maximum number of seat selected
+                  </p>
                   <!-- Totals and apply Coupon -->
                   <div class="flex justify-between items-center py-4">
                     <h5 class="font-medium">Total Price</h5>
                     <h5 class="font-medium">
                       BDT
-                      <span>1100</span>
+                      <span id="total-price">0</span>
                     </h5>
                   </div>
-                  <div class="flex bg-white p-2 rounded-xl mb-4">
+                  <div
+                    id="coupon-section"
+                    class="flex bg-white p-2 rounded-xl mb-4"
+                  >
                     <input
+                      id="coupon-input"
                       disabled
                       class="w-full ps-2 outline-1 outline-emerald-500 rounded-lg"
                       type="text"
                       placeholder="Have any coupon?"
                     />
                     <input
+                      id="coupon-apply"
                       disabled
                       class="btn bg-green-500 text-white hover:bg-green-700"
                       type="submit"
@@ -490,7 +498,7 @@
                     <h5 class="font-medium">Grand Total</h5>
                     <h5 class="font-medium">
                       BDT
-                      <span>1100</span>
+                      <span id="grand-total">0</span>
                     </h5>
                   </div>
                 </div>
@@ -507,6 +515,7 @@
                   <label class="block" for="">
                     <span class="font-semibold">Phone Number*</span>
                     <input
+                      id="phone-number"
                       class="w-full h-16 rounded-xl border ps-6 mt-4 outline-green-500"
                       type="number"
                       placeholder="Enter your name"
@@ -521,9 +530,11 @@
                     />
                   </label>
                   <input
-                    class="w-full h-16 text-white bg-green-500 rounded-xl font-raleway font-extrabold text-lg hover:bg-green-700 duration-300 cursor-pointer"
+                    id="form-submit"
+                    class="btn w-full h-16 text-white bg-green-500 rounded-xl font-raleway font-extrabold text-lg hover:bg-green-700 duration-300 cursor-pointer"
                     type="submit"
                     value="Next"
+                    disabled
                   />
                   <div class="flex items-center justify-around">
                     <a class="underline opacity-60" href="#"

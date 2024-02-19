@@ -50,7 +50,7 @@ function setInnerText(elementId, value) {
 const seats = document.getElementsByClassName("seat-serial");
 let seatCount = 0;
 let totalSeatLeft = parseInt(document.getElementById("seat-left").innerText);
-
+let totalPrice = 0;
 for (const seat of seats) {
   seat.addEventListener("click", function ticket() {
     seat.classList.add("clicked");
@@ -86,6 +86,51 @@ for (const seat of seats) {
       <span id="seat-name">${seatName}</span><span>Economy</span
       ><span>550</span>`;
       seatList.appendChild(seatInfo);
+      // Ticket Pricing And Discount ----->
+      totalPrice = totalPrice + 550;
+      setInnerText("total-price", totalPrice);
+      setInnerText("grand-total", totalPrice);
+      if (seatCount === 4) {
+        const couponInput = document.getElementById("coupon-input");
+        const couponApply = document.getElementById("coupon-apply");
+        couponInput.removeAttribute("disabled");
+        couponApply.removeAttribute("disabled");
+        document.getElementById("seat-limit").classList.remove("hidden");
+        document
+          .getElementById("coupon-apply")
+          .addEventListener("click", function () {
+            const couponCode = document.getElementById("coupon-input").value;
+            if (couponCode === "NEW15") {
+              discountTotal = totalPrice - (totalPrice * 15) / 100;
+              setInnerText("grand-total", discountTotal);
+              document.getElementById("coupon-section").classList.add("hidden");
+            } else if (couponCode === "Couple 20") {
+              discountTotal = totalPrice - (totalPrice * 20) / 100;
+              setInnerText("grand-total", discountTotal);
+              document.getElementById("coupon-section").classList.add("hidden");
+            } else {
+              document.getElementById("coupon-input").value = "";
+              alert("Enter a valid coupon code");
+            }
+          });
+      }
     }
   });
 }
+
+// Form Functions -----------------
+const phoneNumber = document.getElementById("phone-number");
+phoneNumber.addEventListener("keyup", function (value) {
+  let number = parseInt(phoneNumber.value);
+  if (
+    totalPrice >= 550 &&
+    typeof number === "number" &&
+    isNaN(number) === false
+  ) {
+    let formSubmit = document.getElementById("form-submit");
+    formSubmit.removeAttribute("disabled");
+  } else {
+    let formSubmit = document.getElementById("form-submit");
+    formSubmit.setAttribute("disabled", true);
+  }
+});
