@@ -31,3 +31,11 @@ function seatSerialStyle() {
   }
 }
 seatSerialStyle();
+
+// Click to Scroll Function -----------------------
+document
+  .getElementById("buy-ticket-btn")
+  .addEventListener("click", function () {
+    const ticketArea = document.getElementById("buy-ticket-area");
+    ticketArea.scrollIntoView({ behavior: "smooth" });
+  });
