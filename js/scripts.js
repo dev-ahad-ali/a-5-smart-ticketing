@@ -57,5 +57,14 @@ for (const seat of seats) {
     // Seat Left ---->
     totalSeatLeft = totalSeatLeft - 1;
     setInnerText("seat-left", totalSeatLeft);
+    // Seat Listing ----->
+    const seatName = seat.innerText;
+    const seatList = document.getElementById("seat-list");
+    const seatInfo = document.createElement("li");
+    seatInfo.innerHTML = `<li class="opacity-60 flex justify-between items-center">
+    <span id="seat-name">${seatName}</span><span>Economy</span
+    ><span>550</span>
+    </li>`;
+    seatList.appendChild(seatInfo);
   });
 }
