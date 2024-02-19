@@ -26,7 +26,8 @@ function seatSerialStyle() {
       "bg-[#F7F8F8]",
       "rounded-xl",
       "text-center",
-      "cursor-pointer"
+      "cursor-pointer",
+      "duration-300"
     );
   }
 }
@@ -49,22 +50,42 @@ function setInnerText(elementId, value) {
 const seats = document.getElementsByClassName("seat-serial");
 let seatCount = 0;
 let totalSeatLeft = parseInt(document.getElementById("seat-left").innerText);
+
 for (const seat of seats) {
-  seat.addEventListener("click", function () {
-    // Seat Added ---->
+  seat.addEventListener("click", function ticket() {
+    seat.classList.add("clicked");
+    // Only add ticket ones ---->
+    if (seat.classList.contains("clicked") === true) {
+      seat.removeEventListener("click", ticket);
+    }
+    // Seat Count ---->
     seatCount = seatCount + 1;
-    setInnerText("seat-added", seatCount);
     // Seat Left ---->
     totalSeatLeft = totalSeatLeft - 1;
-    setInnerText("seat-left", totalSeatLeft);
-    // Seat Listing ----->
-    const seatName = seat.innerText;
-    const seatList = document.getElementById("seat-list");
-    const seatInfo = document.createElement("li");
-    seatInfo.innerHTML = `<li class="opacity-60 flex justify-between items-center">
-    <span id="seat-name">${seatName}</span><span>Economy</span
-    ><span>550</span>
-    </li>`;
-    seatList.appendChild(seatInfo);
+    // Adding seat number and seat list ---->
+    if (seatCount <= 4) {
+      // Show Seat count
+      setInnerText("seat-added", seatCount);
+      // Show Seat Left
+      setInnerText("seat-left", totalSeatLeft);
+      // Seat style ---->
+      seat.style.backgroundColor = "#22c55e";
+      seat.style.opacity = "1";
+      seat.style.color = "#ffffff";
+      // Seat Listing ----->
+      const seatName = seat.innerText;
+      const seatList = document.getElementById("seat-list");
+      const seatInfo = document.createElement("li");
+      seatInfo.classList.add(
+        "opacity-60",
+        "flex",
+        "justify-between",
+        "items-center"
+      );
+      seatInfo.innerHTML = `
+      <span id="seat-name">${seatName}</span><span>Economy</span
+      ><span>550</span>`;
+      seatList.appendChild(seatInfo);
+    }
   });
 }
